@@ -9,7 +9,7 @@ namespace Sunibpolis_backend.Models
         public int PaymentMethodId { get; set; }
 
         [MaxLength(10)]
-        public string PaymentMethodtype { get; set; }
+        public string PaymentMethodType { get; set; }
 
         [MaxLength(10)]
         public String PaymentMethodName { get; set; }
