@@ -5,11 +5,13 @@ namespace Sunibpolis_backend.Models
     public class Seat
     {
         [Key]
-        public int seatId { get; set; }
-        public char seatName { get; set; }
-        public int seatNumber { get; set; }
+        public int SeatId { get; set; }
+        public char SeatName { get; set; }
+        public int SeatNumber { get; set; }
         [MaxLength(10)]
-        public string seatStatus { get; set; }
+        public string SeatStatus { get; set; }
+
+        public ICollection<Theater> Theaters { get; set; }
 
     }
 }

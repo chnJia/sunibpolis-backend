@@ -12,7 +12,7 @@ namespace Sunibpolis_backend.Models
 
         [ForeignKey("City")]
         public int CityId { get; set; }
-        public Seat Seat { get; set; }
+        public City city { get; set; }
 
         [ForeignKey("Movie")]
         public int MovieId { get; set; }

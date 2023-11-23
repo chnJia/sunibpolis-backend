@@ -10,6 +10,11 @@ namespace Sunibpolis_backend.Models
         public int TicketPrice { get; set; }
         public ICollection<Transaction> Transactions { get; set; }
 
+        [ForeignKey("CinemaLocation")]
+        public int CinemaLocationId { get; set; }
+        public CinemaLocation CinemaLocation { get; set; }
+
+
 
     }
 }
