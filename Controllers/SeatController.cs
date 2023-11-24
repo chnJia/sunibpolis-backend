@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Sunibpolis_backend.Data;
 using Sunibpolis_backend.Models.Result;
 
@@ -17,6 +18,26 @@ namespace Sunibpolis_backend.Controllers
 
         // GET ALL SEAT DATA
         [HttpGet]
-       // public async Task<IActionResult<IEnumerable<GetSeatResult>>
+        public async Task<ActionResult<IEnumerable<GetSeatResult>>> Get()
+        {
+            var seat = await _context.Seat
+            .OrderBy(x => x.SeatName)
+            .Select(x => new GetSeatResult()
+            {
+                SeatId = x.SeatId,
+                SeatName = x.SeatName,
+                SeatNumber = x.SeatNumber,
+                SeatStatus = x.SeatStatus
+            })
+               .ToListAsync();
+
+            var response = new ApiResponse<IEnumerable<GetSeatResult>>
+            {
+                StatusCode = StatusCodes.Status200OK,
+                RequestMethod = HttpContext.Request.Method,
+                Data = seat
+            };
+            return Ok(response);
+        }
     }
 }

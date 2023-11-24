@@ -6,7 +6,7 @@ namespace Sunibpolis_backend.Models
     {
         [Key]
         public int SeatId { get; set; }
-        public char SeatName { get; set; }
+        public string SeatName { get; set; }
         public int SeatNumber { get; set; }
         [MaxLength(10)]
         public string SeatStatus { get; set; }
