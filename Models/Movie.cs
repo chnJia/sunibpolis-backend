@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 namespace Sunibpolis_backend.Models
@@ -25,8 +25,9 @@ namespace Sunibpolis_backend.Models
         [MaxLength(50)]
         public string MovieDescription { get; set; }
 
-        public ICollection<Theater> Theaters { get; set; }
 
+
+        public ICollection<Theater> Theaters { get; set; }
 
     }
 }
