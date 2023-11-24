@@ -3269,24 +3269,40 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\dave08\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+=======
+    "C:\\Users\\angel\\.nuget\\packages\\": {}
+>>>>>>> e1dabded086fcb9d9e222166a49294909c063cba
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\dave08\\Downloads\\Backend\\sunibpolis-backend\\Sunibpolis-backend.csproj",
       "projectName": "Sunibpolis-backend",
       "projectPath": "C:\\Users\\dave08\\Downloads\\Backend\\sunibpolis-backend\\Sunibpolis-backend.csproj",
       "packagesPath": "C:\\Users\\dave08\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\dave08\\Downloads\\Backend\\sunibpolis-backend\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\angel\\projectAngel\\IT Division Training\\IT-Div-Bootcamp-Final-Project\\SE\\Sunibpolis-backend\\Sunibpolis-backend.csproj",
+      "projectName": "Sunibpolis-backend",
+      "projectPath": "C:\\Users\\angel\\projectAngel\\IT Division Training\\IT-Div-Bootcamp-Final-Project\\SE\\Sunibpolis-backend\\Sunibpolis-backend.csproj",
+      "packagesPath": "C:\\Users\\angel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\angel\\projectAngel\\IT Division Training\\IT-Div-Bootcamp-Final-Project\\SE\\Sunibpolis-backend\\obj\\",
+>>>>>>> e1dabded086fcb9d9e222166a49294909c063cba
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\dave08\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+=======
+        "C:\\Users\\angel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> e1dabded086fcb9d9e222166a49294909c063cba
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3340,6 +3356,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.25, 6.0.25]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -3348,8 +3382,20 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
+>>>>>>> e1dabded086fcb9d9e222166a49294909c063cba
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\angel\\projectAngel\\IT Division Training\\IT-Div-Bootcamp-Final-Project\\SE\\Sunibpolis-backend\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
