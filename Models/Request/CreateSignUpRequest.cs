@@ -23,6 +23,5 @@ namespace Sunibpolis_backend.Models.Request
         [Required]
         public int UserAge { get; set; }
 
-
     }
 }
