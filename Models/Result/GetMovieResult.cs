@@ -1,7 +1,4 @@
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-
-namespace Sunibpolis_backend.Models
+﻿namespace Sunibpolis_backend.Models.Result
 {
     public class GetMovieResult
     {
@@ -18,6 +15,5 @@ namespace Sunibpolis_backend.Models
         public int MovieDurationTime { get; set; }
 
         public string MovieDescription { get; set; }
-
     }
 }
