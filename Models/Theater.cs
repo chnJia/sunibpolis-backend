@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore.Storage;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Sunibpolis_backend.Models
@@ -13,6 +14,14 @@ namespace Sunibpolis_backend.Models
         [ForeignKey("Seat")]
         public int SeatId { get; set; }
         public Seat Seat { get; set; }
+
+        [ForeignKey("MovieShowTime")]
+        public int MovieShowTimeId { get; set; }
+        public MovieShowTime MovieShowTime { get; set; }
+
+        [ForeignKey("Movie")]
+        public int MovieId { get; set; }
+        public Movie Movie { get; set; }
 
         public ICollection<CinemaLocation> CinemaLocation { get; set; }
     }

@@ -14,10 +14,6 @@ namespace Sunibpolis_backend.Models
         public int CityId { get; set; }
         public City city { get; set; }
 
-        [ForeignKey("Movie")]
-        public int MovieId { get; set; }
-        public Movie Movie { get; set; }
-
         [ForeignKey("Theater")]
         public int TheaterId { get; set; }
         public Theater Theater { get; set; }
