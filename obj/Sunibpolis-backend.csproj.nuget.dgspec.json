@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ken/Documents/ITDiv/SEProject/sunibpolis-backend/Sunibpolis-backend.csproj": {}
+    "/Users/ken/Documents/ITDiv/SEproject/sunibpolis-backend/Sunibpolis-backend.csproj": {}
   },
   "projects": {
-    "/Users/ken/Documents/ITDiv/SEProject/sunibpolis-backend/Sunibpolis-backend.csproj": {
+    "/Users/ken/Documents/ITDiv/SEproject/sunibpolis-backend/Sunibpolis-backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ken/Documents/ITDiv/SEProject/sunibpolis-backend/Sunibpolis-backend.csproj",
+        "projectUniqueName": "/Users/ken/Documents/ITDiv/SEproject/sunibpolis-backend/Sunibpolis-backend.csproj",
         "projectName": "Sunibpolis-backend",
-        "projectPath": "/Users/ken/Documents/ITDiv/SEProject/sunibpolis-backend/Sunibpolis-backend.csproj",
+        "projectPath": "/Users/ken/Documents/ITDiv/SEproject/sunibpolis-backend/Sunibpolis-backend.csproj",
         "packagesPath": "/Users/ken/.nuget/packages/",
-        "outputPath": "/Users/ken/Documents/ITDiv/SEProject/sunibpolis-backend/obj/",
+        "outputPath": "/Users/ken/Documents/ITDiv/SEproject/sunibpolis-backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ken/.nuget/NuGet/NuGet.Config"
@@ -39,6 +39,18 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"

@@ -1,4 +1,6 @@
-﻿namespace Sunibpolis_backend.Models.Request
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Sunibpolis_backend.Models.Request
 {
     public class CreateNewSeatRequest
     {
