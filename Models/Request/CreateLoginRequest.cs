@@ -11,5 +11,6 @@ namespace Sunibpolis_backend.Models.Request
         [Required]
         [MaxLength(13)]
         public string UserPassword { get; set; }
+
     }
 }
