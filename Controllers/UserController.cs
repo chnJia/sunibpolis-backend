@@ -11,7 +11,7 @@ namespace Sunibpolis_backend.Data
     public class UserController : ControllerBase
     {
         private readonly AppDbContext _context;
-        
+
         public UserController(AppDbContext context)
         {
             _context = context;
@@ -24,14 +24,14 @@ namespace Sunibpolis_backend.Data
             var user = await _context.User
                 .OrderBy(x => x.UserName)
                 .Select(x => new GetUserResult()
-        {
-                UserId = x.UserId,
-            UserName = x.UserName,
-            UserEmail = x.UserEmail,
-            UserPhoneNumber = x.UserPhoneNumber,
-            UserPassword = x.UserPassword,
-            UserAge = x.UserAge
-        })
+                {
+                    UserId = x.UserId,
+                    UserName = x.UserName,
+                    UserEmail = x.UserEmail,
+                    UserPhoneNumber = x.UserPhoneNumber,
+                    UserPassword = x.UserPassword,
+                    UserAge = x.UserAge
+                })
         .ToListAsync();
             var response = new ApiResponse<IEnumerable<GetUserResult>>
             {
@@ -94,7 +94,7 @@ namespace Sunibpolis_backend.Data
                 x => x.UserPassword == createSignUpRequest.UserPasswod
             );
 
-            if ( checkPassword != null)
+            if (checkPassword != null)
             {
                 return Conflict("Password has been taken, please use another password");
             }
