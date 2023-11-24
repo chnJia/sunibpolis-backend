@@ -6,7 +6,7 @@ namespace Sunibpolis_backend.Models
     public class CinemaLocation
     {
         [Key]
-        public int CinemaLocationId {  get; set; }
+        public int CinemaLocationId { get; set; }
         [MaxLength(50)]
         public string CinemaLocationName { get; set; }
 
