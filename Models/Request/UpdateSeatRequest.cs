@@ -2,7 +2,7 @@
 
 namespace Sunibpolis_backend.Models.Request
 {
-    public class CreateNewSeatRequest
+    public class UpdateSeatRequest
     {
         [Required]
         [MaxLength(10)]

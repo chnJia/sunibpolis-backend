@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Sunibpolis_backend.Data;
+using Sunibpolis_backend.Models.Request;
 using Sunibpolis_backend.Models.Result;
 
 namespace Sunibpolis_backend.Controllers
@@ -38,6 +39,25 @@ namespace Sunibpolis_backend.Controllers
                 Data = seat
             };
             return Ok(response);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(int SeatId, [FromBody] UpdateSeatRequest UpdateSeatRequest)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var seat = await _context.Seat.FirstOrDefaultAsync(s => s.SeatStatus == "Occupied");
+            if (seat.SeatStatus == "Occupied")
+            {
+                return NotFound("Kursi sudah dipesan");
+            }
+            seat.SeatStatus = UpdateSeatRequest.SeatStatus;
+
+            await _context.SaveChangesAsync();
+            return Ok();
+
         }
     }
 }
