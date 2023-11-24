@@ -5,6 +5,8 @@ using Sunibpolis_backend.Models.Result;
 
 namespace Sunibpolis_backend.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class CityController : ControllerBase
     {
         private readonly AppDbContext _context;
