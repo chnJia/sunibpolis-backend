@@ -42,7 +42,6 @@ namespace Sunibpolis_backend.Data
             return Ok(response);
         }
 
-
         // POST CHECK LOGIN USER
         [Route("api/User/login")]
         [HttpPost]

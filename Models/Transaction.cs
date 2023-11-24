@@ -9,7 +9,6 @@ namespace Sunibpolis_backend.Models
         public int TransactionId { get; set; }
         [MaxLength(10)]
         public string TransactionStatus { get; set; }
-        public int TotalTicket { get; set; }
         public int TotalPrice { get; set; }
 
         [ForeignKey("User")]
