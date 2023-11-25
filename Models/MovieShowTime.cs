@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Sunibpolis_backend.Models
 {
@@ -9,7 +10,9 @@ namespace Sunibpolis_backend.Models
 
         public DateTime ShowTime { get; set; }
 
-        public ICollection<Theater> Theater { get; set; }
+        [ForeignKey("MovieShowTime")]
+        public int TheaterId { get; set; }
+        public Theater Theater { get; set; }
 
     }
 }
