@@ -18,7 +18,5 @@ namespace Sunibpolis_backend.Models
         public int TheaterId { get; set; }
         public Theater Theater { get; set; }
 
-        public ICollection<Ticket> Tickets { get; set; }
-
     }
 }
