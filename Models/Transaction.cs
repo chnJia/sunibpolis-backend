@@ -11,7 +11,6 @@ namespace Sunibpolis_backend.Models
 
         [MaxLength(10)]
         public string TransactionStatus { get; set; }
-        public DateTime TransactionDate { get; set; }
 
         public int TotalTicket { get; set; }
         public int TotalPrice { get; set; }
