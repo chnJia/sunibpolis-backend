@@ -7,8 +7,6 @@ namespace Sunibpolis_backend.Models
     {
         [Key]
         public int TicketId { get; set; }
-        public int TicketPrice { get; set; }
-        public int TotalTicket { get; set; }
 
         [ForeignKey("Theater")]
         public int TheaterId { get; set; }
