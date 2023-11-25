@@ -11,5 +11,6 @@ namespace Sunibpolis_backend.Models
         public string CityName { get; set; }
 
         public ICollection<CinemaLocation> CinemaLocation { get; set; }
+
     }
 }

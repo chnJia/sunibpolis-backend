@@ -23,6 +23,5 @@ namespace Sunibpolis_backend.Models
 
         public ICollection<Transaction> Transaction { get; set; }
 
-
     }
 }
