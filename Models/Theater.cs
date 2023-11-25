@@ -11,15 +11,17 @@ namespace Sunibpolis_backend.Models
         public string TheaterName { get; set; }
         public int TicketPrice { get; set; }
 
-        [ForeignKey("MovieShowTime")]
-        public int MovieShowTimeId { get; set; }
-        public MovieShowTime MovieShowTime { get; set; }
-
         [ForeignKey("Movie")]
         public int MovieId { get; set; }
         public Movie Movie { get; set; }
 
+        [ForeignKey("CinemaLocation")]
+        public int CinemaLocationId { get; set; }
+        public CinemaLocation CinemaLocation { get; set; }
+
         public ICollection<Ticket> Ticket { get; set; }
+        public ICollection<MovieShowTime> MovieShowTime { get; set; }
+        public ICollection<Seat> Seat { get; set; }
 
     }
 }

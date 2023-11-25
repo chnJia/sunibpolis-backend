@@ -7,10 +7,12 @@ namespace Sunibpolis_backend.Models
     {
         [Key]
         public int TransactionId { get; set; }
+        public DateTime TransactionDate { get; set; }
+
         [MaxLength(10)]
         public string TransactionStatus { get; set; }
         public DateTime TransactionDate { get; set; }
-      
+
         public int TotalTicket { get; set; }
         public int TotalPrice { get; set; }
 
@@ -25,7 +27,6 @@ namespace Sunibpolis_backend.Models
         [ForeignKey("PaymentMethod")]
         public int PaymentMethodId { get; set; }
         public PaymentMethod PaymentMethod { get; set; }
-        
 
     }
 }

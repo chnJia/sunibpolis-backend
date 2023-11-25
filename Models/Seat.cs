@@ -11,6 +11,7 @@ namespace Sunibpolis_backend.Models
         [MaxLength(5)]
         public string SeatName { get; set; }
         public int SeatNumber { get; set; }
+
         [MaxLength(10)]
         public string SeatStatus { get; set; }
 
