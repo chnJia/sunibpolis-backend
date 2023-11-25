@@ -14,7 +14,7 @@ namespace Sunibpolis_backend.Models
         [MaxLength(10)]
         public string PaymentMethodName { get; set; }
 
-        public ICollection<Transaction> Transactions { get; set; }
+        public ICollection<Transaction> Transaction { get; set; }
 
     }
 }

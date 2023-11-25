@@ -25,9 +25,7 @@ namespace Sunibpolis_backend.Models
         [MaxLength(50)]
         public string MovieDescription { get; set; }
 
-
-
-        public ICollection<Theater> Theaters { get; set; }
+        public ICollection<Theater> Theater { get; set; }
 
     }
 }

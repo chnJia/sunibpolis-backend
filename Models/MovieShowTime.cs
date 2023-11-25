@@ -9,7 +9,7 @@ namespace Sunibpolis_backend.Models
 
         public DateTime ShowTime { get; set; }
 
-        public ICollection<Theater> Theaters { get; set; }
+        public ICollection<Theater> Theater { get; set; }
 
     }
 }
