@@ -15,9 +15,8 @@ namespace Sunibpolis_backend.Models
         public string SeatStatus { get; set; }
 
         [ForeignKey("Theater")]
-        public int TheaterId {get;set;}
-        public Theater Theater {get;set;}
-    
+        public int TheaterId { get; set; }
+        public Theater Theater { get; set; }
 
     }
 }
