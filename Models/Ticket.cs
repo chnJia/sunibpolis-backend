@@ -10,9 +10,9 @@ namespace Sunibpolis_backend.Models
         public int TicketPrice { get; set; }
         public int TotalTicket { get; set; }
 
-        [ForeignKey("CinemaLocation")]
-        public int CinemaLocationId { get; set; }
-        public CinemaLocation CinemaLocation { get; set; }
+        [ForeignKey("Theater")]
+        public int TheaterId { get; set; }
+        public Theater Theater { get; set; }
         public ICollection<Transaction> Transaction { get; set; }
 
     }
