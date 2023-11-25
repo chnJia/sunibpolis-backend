@@ -7,5 +7,6 @@ namespace Sunibpolis_backend.Models.Result
         public int StatusCode { get; set; }
         public string RequestMethod { get; set; }
         public T Data { get; set; }
+
     }
 }
