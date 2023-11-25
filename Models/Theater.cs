@@ -11,10 +11,6 @@ namespace Sunibpolis_backend.Models
         public string TheaterName { get; set; }
         public int TicketPrice { get; set; }
 
-        [ForeignKey("Seat")]
-        public int SeatId { get; set; }
-        public Seat Seat { get; set; }
-
         [ForeignKey("MovieShowTime")]
         public int MovieShowTimeId { get; set; }
         public MovieShowTime MovieShowTime { get; set; }
@@ -23,7 +19,7 @@ namespace Sunibpolis_backend.Models
         public int MovieId { get; set; }
         public Movie Movie { get; set; }
 
-        public ICollection<CinemaLocation> CinemaLocation { get; set; }
+        public ICollection<Ticket> Ticket { get; set; }
 
     }
 }
