@@ -11,6 +11,7 @@ namespace Sunibpolis_backend.Models
         [ForeignKey("Theater")]
         public int Theaterid { get; set; }
         public Theater Theater { get; set; }
+      
         public ICollection<Transaction> Transaction { get; set; }
 
     }
