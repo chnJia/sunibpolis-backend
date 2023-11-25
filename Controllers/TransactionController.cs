@@ -27,8 +27,9 @@ namespace Sunibpolis_backend.Controllers
             {
                 TransactionId = x.TransactionId,
                 TransactionStatus = x.TransactionStatus,
-                TotalPrice = x.TotalPrice,
                 TransactionDate = x.TransactionDate,
+                TotalTicket = x.TotalTicket,
+                TotalPrice = x.TotalPrice,
                 User = x.User,
                 Ticket = x.Ticket,
                 PaymentMethod = x.PaymentMethod
