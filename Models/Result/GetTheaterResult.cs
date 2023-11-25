@@ -5,8 +5,9 @@
         public int TheaterId { get; set; }
         public string TheaterType { get; set; }
         public string TheaterName { get; set; }
-        public Seat Seat { get; set; }       
-        public MovieShowTime MovieShowTime { get; set; }
+        public int TicketPrice { get; set; }
+        public CinemaLocation CinemaLocation { get; set; }
         public Movie Movie { get; set; }
+
     }
 }

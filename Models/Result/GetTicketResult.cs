@@ -3,8 +3,7 @@
     public class GetTicketResult
     {
         public int TicketId { get; set; }
-        public int TicketPrice { get; set; }
-        public int TotalTicket { get; set; }
-        public CinemaLocation CinemaLocation { get; set; }
+        public Theater Theater { get; set; }
+
     }
 }

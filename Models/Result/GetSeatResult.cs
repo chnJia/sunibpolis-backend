@@ -6,6 +6,7 @@
         public string SeatName { get; set; }
         public int SeatNumber { get; set; }
         public string SeatStatus { get; set; }
+        public Theater Theater { get; set; }
 
     }
 }
