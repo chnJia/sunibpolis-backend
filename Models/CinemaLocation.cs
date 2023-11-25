@@ -12,11 +12,9 @@ namespace Sunibpolis_backend.Models
 
         [ForeignKey("City")]
         public int CityId { get; set; }
-        public City city { get; set; }
+        public City City { get; set; }
 
-        [ForeignKey("Theater")]
-        public int TheaterId { get; set; }
-        public Theater Theater { get; set; }
+        public ICollection<Theater> Theater { get; set; }
 
     }
 }
