@@ -24,5 +24,6 @@ namespace Sunibpolis_backend.Models
         public Movie Movie { get; set; }
 
         public ICollection<CinemaLocation> CinemaLocation { get; set; }
+
     }
 }

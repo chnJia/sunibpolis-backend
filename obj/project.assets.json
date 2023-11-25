@@ -3269,26 +3269,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {}
+    "/Users/ken/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\clone4\\sunibpolis-backend\\Sunibpolis-backend.csproj",
+      "projectUniqueName": "/Users/ken/Documents/ITDiv/SE/sunibpolis-backend/Sunibpolis-backend.csproj",
       "projectName": "Sunibpolis-backend",
-      "projectPath": "D:\\clone4\\sunibpolis-backend\\Sunibpolis-backend.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\clone4\\sunibpolis-backend\\obj\\",
+      "projectPath": "/Users/ken/Documents/ITDiv/SE/sunibpolis-backend/Sunibpolis-backend.csproj",
+      "packagesPath": "/Users/ken/.nuget/packages/",
+      "outputPath": "/Users/ken/Documents/ITDiv/SE/sunibpolis-backend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/ken/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3343,7 +3342,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.402/RuntimeIdentifierGraph.json"
       }
     }
   }

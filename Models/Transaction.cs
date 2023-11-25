@@ -23,5 +23,6 @@ namespace Sunibpolis_backend.Models
         public int PaymentMethodId { get; set; }
         public PaymentMethod PaymentMethod { get; set; }
         public DateTime TransactionDate { get; set; }
+
     }
 }
