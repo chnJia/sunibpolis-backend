@@ -9,6 +9,7 @@
         public string MovieAgeRating { get; set; }
         public int MovieDurationTime { get; set; }
         public string MovieDescription { get; set; }
+        public string MovieImg { get; set; }
 
     }
 }

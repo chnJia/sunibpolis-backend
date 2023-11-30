@@ -30,7 +30,8 @@ namespace Sunibpolis_backend.Controllers
                 MovieType = x.MovieType,
                 MovieAgeRating = x.MovieAgeRating,
                 MovieDurationTime = x.MovieDurationTime,
-                MovieDescription = x.MovieDescription
+                MovieDescription = x.MovieDescription,
+                MovieImg = x.MovieImg
             })
                .ToListAsync();
 
