@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Sunibpolis_backend.Data;
 using Sunibpolis_backend.Models;
+using Sunibpolis_backend.Models.Request;
 using Sunibpolis_backend.Models.Result;
 
 namespace Sunibpolis_backend.Controllers
@@ -31,7 +32,7 @@ namespace Sunibpolis_backend.Controllers
                 TotalTicket = x.TotalTicket,
                 TotalPrice = x.TotalPrice,
                 User = x.User,
-                Ticket = x.Ticket,
+                Theater = x.Theater,
                 PaymentMethod = x.PaymentMethod
             })
             .ToListAsync();
@@ -43,6 +44,32 @@ namespace Sunibpolis_backend.Controllers
                 Data = transaction
             };
             return Ok(response);
+        }
+
+        // CREATE NEW TRANSACTION
+        [Route("api/CreateTransaction")]
+        [HttpPost]
+        public async Task<IActionResult> Post([FromBody] CreateTransactionRequest createTransactionRequest)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+           var transaction = new Transaction
+            {
+                TransactionDate = createTransactionRequest.TransactionDate,
+                TransactionStatus = createTransactionRequest.TransactionStatus,
+                TotalTicket = createTransactionRequest.TotalTicket,
+                TotalPrice = createTransactionRequest.TotalPrice,
+                User = createTransactionRequest.User,
+                Theater = createTransactionRequest.Theater,
+                PaymentMethod = createTransactionRequest.PaymentMethod
+            };
+
+            _context.Transaction.Add(transaction);
+            await _context.SaveChangesAsync();
+            return Ok();
         }
     }
 }

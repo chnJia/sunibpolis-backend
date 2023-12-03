@@ -10,7 +10,7 @@ namespace Sunibpolis_backend.Models
 
         public DateTime ShowTime { get; set; }
 
-        [ForeignKey("MovieShowTime")]
+        [ForeignKey("Theater")]
         public int TheaterId { get; set; }
         public Theater Theater { get; set; }
 

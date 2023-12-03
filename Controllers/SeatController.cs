@@ -28,7 +28,8 @@ namespace Sunibpolis_backend.Controllers
                 SeatId = x.SeatId,
                 SeatName = x.SeatName,
                 SeatNumber = x.SeatNumber,
-                SeatStatus = x.SeatStatus
+                SeatStatus = x.SeatStatus,
+                Theater = x.Theater
             })
                .ToListAsync();
 

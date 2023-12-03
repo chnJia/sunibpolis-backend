@@ -21,12 +21,12 @@ namespace Sunibpolis_backend.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<GetMovieShowTimeResult>>> Get()
         {
-            var seat = await _context.MovieShowTime
+            var movieShowTime = await _context.MovieShowTime
             .OrderBy(x => x.ShowTime)
             .Select(x => new GetMovieShowTimeResult()
             {
                 MovieShowTimeId = x.MovieShowTimeId,
-                MovieShowTime = x.ShowTime,
+                ShowTime = x.ShowTime,
                 Theater = x.Theater
 
             })
@@ -36,7 +36,7 @@ namespace Sunibpolis_backend.Controllers
             {
                 StatusCode = StatusCodes.Status200OK,
                 RequestMethod = HttpContext.Request.Method,
-                Data = seat
+                Data = movieShowTime
             };
             return Ok(response);
         }

@@ -90,7 +90,7 @@ namespace Sunibpolis_backend.Data
             }
 
             var checkPassword = await _context.User.FirstOrDefaultAsync(
-                x => x.UserPassword == createSignUpRequest.UserPasswod
+                x => x.UserPassword == createSignUpRequest.UserPassword
             );
 
             if (checkPassword != null)
@@ -111,7 +111,7 @@ namespace Sunibpolis_backend.Data
             {
                 UserName = createSignUpRequest.UserName,
                 UserEmail = createSignUpRequest.UserEmail,
-                UserPassword = createSignUpRequest.UserPasswod,
+                UserPassword = createSignUpRequest.UserPassword,
                 UserPhoneNumber = createSignUpRequest.UserPhoneNumber,
                 UserAge = createSignUpRequest.UserAge
             };

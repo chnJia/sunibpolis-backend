@@ -19,7 +19,7 @@ namespace Sunibpolis_backend.Models
         public int CinemaLocationId { get; set; }
         public CinemaLocation CinemaLocation { get; set; }
 
-        public ICollection<Ticket> Ticket { get; set; }
+        public ICollection<Transaction> Transaction { get; set; }
         public ICollection<MovieShowTime> MovieShowTime { get; set; }
         public ICollection<Seat> Seat { get; set; }
 

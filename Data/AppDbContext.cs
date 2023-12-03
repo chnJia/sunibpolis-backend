@@ -14,7 +14,6 @@ namespace Sunibpolis_backend.Data
         public DbSet<PaymentMethod> PaymentMethod { get; set; }
         public DbSet<Seat> Seat { get; set; }
         public DbSet<Theater> Theater { get; set; }
-        public DbSet<Ticket> Ticket { get; set; }
         public DbSet<Transaction> Transaction { get; set; }
         public DbSet<User> User { get; set; }
     }
