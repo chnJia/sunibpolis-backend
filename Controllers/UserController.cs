@@ -52,7 +52,7 @@ namespace Sunibpolis_backend.Data
                 return BadRequest(ModelState);
             }
 
-            var checkEmail = await _context.User.FirstOrDefaultAsync(
+            var checkEmail = await _context.User.SingleOrDefaultAsync(
                 x => x.UserEmail == createLoginRequest.UserEmail
             );
 
@@ -67,7 +67,7 @@ namespace Sunibpolis_backend.Data
             }
 
             // login success
-            return Ok("Login Successful");
+            return Ok(checkEmail);
         }
 
         // POST CHECK REGISTER USER
