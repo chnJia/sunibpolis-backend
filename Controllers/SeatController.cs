@@ -56,11 +56,18 @@ namespace Sunibpolis_backend.Controllers
                 return NotFound("Seat has been taken");
             }
 
+            if (seat.SeatId != seat.SeatId)
+            {
+                return BadRequest("SeatId in the request body does not match the route parameter");
+            }
+
+            UpdateSeatRequest.SeatStatus = "Occupied";
+
             seat.SeatStatus = UpdateSeatRequest.SeatStatus;
 
             await _context.SaveChangesAsync();
             return Ok();
-
         }
+        
     }
 }
