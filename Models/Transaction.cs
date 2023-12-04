@@ -26,10 +26,5 @@ namespace Sunibpolis_backend.Models
         [ForeignKey("PaymentMethod")]
         public int PaymentMethodId { get; set; }
         public PaymentMethod PaymentMethod { get; set; }
-
-        // Additional properties to store related entity names
-        public string MovieName { get; set; }
-        public string CinemaLocationName { get; set; }
-        public string SeatName { get; set; }
     }
 }
