@@ -8,11 +8,11 @@ namespace Sunibpolis_backend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PaymentMenthodController : ControllerBase
+    public class PaymentMethodController : ControllerBase
     {
         private readonly AppDbContext _context;
 
-        public PaymentMenthodController(AppDbContext context)
+        public PaymentMethodController(AppDbContext context)
         {
             _context = context;
         }
