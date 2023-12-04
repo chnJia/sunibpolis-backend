@@ -49,11 +49,13 @@ namespace Sunibpolis_backend.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var seat = await _context.Seat.FirstOrDefaultAsync(s => s.SeatStatus == "Occupied");
+            var seat = await _context.Seat.FirstOrDefaultAsync(s => s.SeatId == SeatId);
+
             if (seat.SeatStatus == "Occupied")
             {
-                return NotFound("Kursi sudah dipesan");
+                return NotFound("Seat has been taken");
             }
+
             seat.SeatStatus = UpdateSeatRequest.SeatStatus;
 
             await _context.SaveChangesAsync();

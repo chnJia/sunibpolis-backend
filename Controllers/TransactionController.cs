@@ -56,15 +56,38 @@ namespace Sunibpolis_backend.Controllers
                 return BadRequest(ModelState);
             }
 
-           var transaction = new Transaction
+            // Retrieve Theater based on provided TheaterName
+            var theater = await _context.Theater
+                .Include(t => t.Movie)
+                .Include(t => t.Seat)
+                .FirstOrDefaultAsync(t => t.TheaterName == createTransactionRequest.TheaterName);
+
+            if (theater == null)
+            {
+                return NotFound("Theater not found");
+            }
+
+            // Retrieve Seat based on provided SeatName
+            var seat = theater.Seat.FirstOrDefault(s => s.SeatName == createTransactionRequest.SeatName);
+
+            if (seat == null)
+            { 
+                return NotFound("Seat not found");
+            }
+
+            var transaction = new Transaction
             {
                 TransactionDate = createTransactionRequest.TransactionDate,
                 TransactionStatus = createTransactionRequest.TransactionStatus,
                 TotalTicket = createTransactionRequest.TotalTicket,
                 TotalPrice = createTransactionRequest.TotalPrice,
-                User = createTransactionRequest.User,
-                Theater = createTransactionRequest.Theater,
-                PaymentMethod = createTransactionRequest.PaymentMethod
+                UserId = createTransactionRequest.UserId,
+                Theater = theater,
+                MovieName = theater.Movie?.MovieName,
+                SeatName = seat.SeatName,
+                CinemaLocationName = theater.CinemaLocation?.CinemaLocationName,
+                PaymentMethod = await _context.PaymentMethod
+                    .FirstOrDefaultAsync(pm => pm.PaymentMethodName == createTransactionRequest.PaymentMethodName)
             };
 
             _context.Transaction.Add(transaction);
