@@ -15,5 +15,6 @@ namespace Sunibpolis_backend.Models.Request
 
         public Theater Theater { get; set; }
         public PaymentMethod PaymentMethod { get; set; }
+
     }
 }

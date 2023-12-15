@@ -49,6 +49,7 @@ namespace Sunibpolis_backend.Controllers
             {
                 return BadRequest(ModelState);
             }
+
             var seat = await _context.Seat.FirstOrDefaultAsync(s => s.SeatId == SeatId);
 
             if (seat.SeatStatus == "Occupied")
